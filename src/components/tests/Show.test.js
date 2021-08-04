@@ -5,6 +5,13 @@ import userEvent from '@testing-library/user-event';
 import Show from './../Show';
 
 const testShow = {
+    name: '',
+    summary: '',
+    seasons: [{
+        id: null,
+        name: '',
+        episodes: []
+    }]
     //add in approprate test data structure here.
 }
 
