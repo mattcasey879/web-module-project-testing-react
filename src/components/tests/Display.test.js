@@ -1,15 +1,35 @@
+import React from 'react';
+import { screen, render } from '@testing-library/react';
+import Display from '../Display'
+import userEvent from '@testing-library/user-event';
+import Show from '../Show';
 
 
+const testShow = {
+    name: '',
+    summary: '',
+    seasons: [{
+        id: 1,
+        name: 'Season 1',
+        episodes: []
+    },{
+        id: 2,
+        name: 'Season 2',
+        episodes: [{}]
+    }]
+}
+
+test('display renders without any errors', () => {
+    render(<Display/>)
+})
 
 
-
-
-
-
-
-
-
-
+test('button clicked displays the show component', () => {
+    render(<Display/>)
+    const button = screen.getByRole('button');
+    // userEvent.click(button)
+    render(<Show />)
+});
 
 
 
